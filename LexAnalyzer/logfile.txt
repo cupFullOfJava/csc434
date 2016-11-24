@@ -1,0 +1,50 @@
+a
+Tokenized Form: IDENTIFIER	
+Statement is Valid
+
+a = b
+Tokenized Form: IDENTIFIER	ASSIGNMENT	IDENTIFIER	
+Statement is Valid
+
+num3 = num1/2 + num2
+Tokenized Form: IDENTIFIER	ASSIGNMENT	IDENTIFIER	OPERATOR	NUMBER	OPERATOR	IDENTIFIER	
+Statement is Valid
+
+a = a + 1
+Tokenized Form: IDENTIFIER	ASSIGNMENT	IDENTIFIER	OPERATOR	NUMBER	
+Statement is Valid
+
+a + 2 * 3 - c + d*e
+Tokenized Form: IDENTIFIER	OPERATOR	NUMBER	OPERATOR	NUMBER	OPERATOR	IDENTIFIER	OPERATOR	IDENTIFIER	OPERATOR	IDENTIFIER	
+Statement is Valid
+
+a              = a             + 2*a
+Tokenized Form: IDENTIFIER	ASSIGNMENT	IDENTIFIER	OPERATOR	NUMBER	OPERATOR	IDENTIFIER	
+Statement is Valid
+
+a$1 + num1
+Tokenized Form: IDENTIFIER	ERROR	
+Error Found. Cannot be sent to Grammar Recognizer
+
+$a1 = 20
+Tokenized Form: ERROR	
+Error Found. Cannot be sent to Grammar Recognizer
+
++ a + 10
+Tokenized Form: OPERATOR	IDENTIFIER	OPERATOR	NUMBER	
+Statement is Invalid
+
+a = -1
+Tokenized Form: IDENTIFIER	ASSIGNMENT	OPERATOR	NUMBER	
+Statement is Invalid
+
+a+=10
+Tokenized Form: IDENTIFIER	OPERATOR	ASSIGNMENT	NUMBER	
+Statement is Invalid
+
+x=a++
+Tokenized Form: IDENTIFIER	ASSIGNMENT	IDENTIFIER	OPERATOR	ERROR	
+Error Found. Cannot be sent to Grammar Recognizer
+
+
+Process finished with exit code 0
